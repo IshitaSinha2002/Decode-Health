@@ -8,6 +8,7 @@ import MenstrualHealth from "./pages/Services/MenstrualHealth";
 import WeightMetabolism from "./pages/Services/WeightMetabolism";
 import Nutrition from "./pages/Services/Nutrition";
 import FitnessRecovery from "./pages/Services/FitnessRecovery";
+import SymptomChecker from "./pages/Services/SymptomChecker";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/metabolism" element={<WeightMetabolism />} />
         <Route path="/nutrition" element={<Nutrition />} />
         <Route path="/fitness" element={<FitnessRecovery />} />
+        <Route path="/symptoms" element={<SymptomChecker />} />
       </Routes>
     </BrowserRouter>
   );
