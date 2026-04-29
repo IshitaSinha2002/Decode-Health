@@ -1,0 +1,184 @@
+/* 🔷 Wrapper */
+.hero-wrapper {
+  width: 100%;
+}
+
+/* 🔷 Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 100px;
+}
+
+/* 🔷 Title */
+.top-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+}
+
+.top-title .health {
+  color: #10b981;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+/* Gradient "Decode" */
+.top-title .decode {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 12px rgba(59, 130, 246, 0.35);
+}
+
+/* 🔷 Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Log In Button */
+.login-btn {
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+/* Sign Up Button */
+.signup-btn {
+  background: #3b82f6;
+  color: #020617;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.signup-btn:hover {
+  background: #2563eb;
+}
+
+/* 🔷 Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 100px;
+  gap: 60px;
+}
+
+/* Left Content */
+.hero-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-left h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+/* Gradient Heading */
+.hero-left span {
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.hero-left p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 🔷 Image Container (FIXED) */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 520px;   /* ⬅️ increased from 420 */
+  aspect-ratio: 1.2;  /* ⬅️ keeps nice proportion */
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(148, 163, 184, 0.15);
+
+  box-shadow: 
+    0 0 80px rgba(16, 185, 129, 0.18),
+    inset 0 0 40px rgba(2, 6, 23, 0.8);
+
+  transition: transform 0.4s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.03);
+}
+
+/* Image */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 🔥 IMPORTANT */
+  opacity: 0.85;
+  filter: contrast(1.1) brightness(0.9);
+}
+
+/* 🔷 Overlay (gradient + glow) */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: 
+    radial-gradient(circle at center, rgba(16, 185, 129, 0.25), transparent 60%),
+    linear-gradient(to bottom, rgba(2, 6, 23, 0.2), rgba(2, 6, 23, 0.9));
+
+  pointer-events: none;
+}
+
+/* 🔷 Responsive */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .top-bar {
+    padding: 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 42px;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 320px;
+  }
+}
