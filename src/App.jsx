@@ -7,6 +7,7 @@ import SmartAssistance from "./pages/Services/SmartAssistance";
 import MenstrualHealth from "./pages/Services/MenstrualHealth";
 import WeightMetabolism from "./pages/Services/WeightMetabolism";
 import Nutrition from "./pages/Services/Nutrition";
+import FitnessRecovery from "./pages/Services/FitnessRecovery";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/menstrual" element={<MenstrualHealth />} />
         <Route path="/metabolism" element={<WeightMetabolism />} />
         <Route path="/nutrition" element={<Nutrition />} />
+        <Route path="/fitness" element={<FitnessRecovery />} />
       </Routes>
     </BrowserRouter>
   );
