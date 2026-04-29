@@ -5,6 +5,7 @@ import LogIn from "./pages/LogIn/LogIn.jsx";
 import HealthProfile from "./pages/HealthProfile/HealthProfile";
 import SmartAssistance from "./pages/Services/SmartAssistance";
 import MenstrualHealth from "./pages/Services/MenstrualHealth";
+import WeightMetabolism from "./pages/Services/WeightMetabolism";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/profile" element={<HealthProfile />} />
         <Route path="/smart" element={<SmartAssistance />} />
         <Route path="/menstrual" element={<MenstrualHealth />} />
+        <Route path="/metabolism" element={<WeightMetabolism />} />
       </Routes>
     </BrowserRouter>
   );
