@@ -9,6 +9,7 @@ import WeightMetabolism from "./pages/Services/WeightMetabolism";
 import Nutrition from "./pages/Services/Nutrition";
 import FitnessRecovery from "./pages/Services/FitnessRecovery";
 import SymptomChecker from "./pages/Services/SymptomChecker";
+import MentalHealth from "./pages/Services/MentalHealth";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/nutrition" element={<Nutrition />} />
         <Route path="/fitness" element={<FitnessRecovery />} />
         <Route path="/symptoms" element={<SymptomChecker />} />
+        <Route path="/mental" element={<MentalHealth />} />
       </Routes>
     </BrowserRouter>
   );
