@@ -10,36 +10,43 @@ export default function HomePage() {
       icon: <Stethoscope />,
       title: "Smart Assistance",
       desc: "24/7 AI-driven clinical support for immediate health inquiries and data synthesis.",
+      route: "/smart",
     },
     {
       icon: <Calendar />,
       title: "Menstrual Health",
       desc: "Sophisticated hormonal cycle tracking with predictive symptom modeling.",
+      route: "/menstrual",
     },
     {
       icon: <Activity />,
       title: "Weight & Metabolism",
       desc: "Real-time metabolic analysis and weight management based on glycemic response.",
+      route: "/metabolism",
     },
     {
       icon: <Apple />,
       title: "Nutrition Intelligence",
       desc: "Precision nutrition mapping optimized for your unique gut microbiome profile.",
+      route: "/nutrition",
     },
     {
       icon: <Dumbbell />,
       title: "Fitness & Recovery",
       desc: "Adaptive workout regimens synchronized with biometric recovery scores.",
+      route: "/fitness",
     },
     {
       icon: <HeartPulse />,
       title: "Symptom Checker",
       desc: "Differential diagnosis logic using world-class clinical databases.",
+      route: "/symptoms",
     },
     {
       icon: <Brain />,
       title: "Mental Health",
       desc: "AI-guided cognitive behavioral support and stress resilience tracking.",
+      route: "/mental",
     },
     {
       icon: <BarChart3 />,
@@ -100,7 +107,8 @@ export default function HomePage() {
           <span>Complete Your Health Profile</span>
         </div>
 
-        <button>Complete Now</button>
+        <button onClick={() => navigate("/profile")}>
+          Complete Now</button>
       </div>
 
       {/* 🔷 Services */}
@@ -111,15 +119,19 @@ export default function HomePage() {
           wellness management.
         </p>
 
-        <div className="grid">
-          {services.map((s, i) => (
-            <div className="card" key={i}>
-              <div className="icon">{s.icon}</div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
-            </div>
-          ))}
-        </div>
+       <div className="grid">
+        {services.map((s, i) => (
+        <div
+          className="card"
+          key={i}
+          onClick={() => s.route && navigate(s.route)}
+        >
+        <div className="icon">{s.icon}</div>   {/* 🔥 THIS LINE */}
+        <h3>{s.title}</h3>
+        <p>{s.desc}</p>
+      </div>
+    ))}
+</div>
       </section>
 
     </div>

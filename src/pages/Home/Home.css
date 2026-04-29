@@ -219,11 +219,14 @@
   text-align: left;
   border: 1px solid rgba(148, 163, 184, 0.08);
   transition: 0.3s ease;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 .card:hover {
-  border: 1px solid #3b82f6;
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  border: 1px solid #10b981;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
 }
 
 .icon {
