@@ -4,6 +4,7 @@ import SignIn from "./pages/SignIn/SignIn.jsx";
 import LogIn from "./pages/LogIn/LogIn.jsx";
 import HealthProfile from "./pages/HealthProfile/HealthProfile";
 import SmartAssistance from "./pages/Services/SmartAssistance";
+import MenstrualHealth from "./pages/Services/MenstrualHealth";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<LogIn />} />
         <Route path="/profile" element={<HealthProfile />} />
         <Route path="/smart" element={<SmartAssistance />} />
+        <Route path="/menstrual" element={<MenstrualHealth />} />
       </Routes>
     </BrowserRouter>
   );
