@@ -1,15 +1,15 @@
-import Hero from "./components/Hero/Hero.jsx";
-import ProfileBanner from "./components/ProfileBanner/ProfileBanner.jsx";
-import Services from "./components/Services/Services.jsx";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/Home/Home.jsx";
+//import SignIn from "./pages/SignIn/SignIn";
+//import SignUp from "./pages/SignUp/SignUp";
 
 function App() {
   return (
-    <div className="app">
-      <Hero />
-      <ProfileBanner />
-      <Services />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
