@@ -3,6 +3,7 @@ import HomePage from "./pages/Home/Home.jsx";
 import SignIn from "./pages/SignIn/SignIn.jsx";
 import LogIn from "./pages/LogIn/LogIn.jsx";
 import HealthProfile from "./pages/HealthProfile/HealthProfile";
+import SmartAssistance from "./pages/Services/SmartAssistance";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/profile" element={<HealthProfile />} />
+        <Route path="/smart" element={<SmartAssistance />} />
       </Routes>
     </BrowserRouter>
   );
